@@ -1,0 +1,16 @@
+%{ 
+#include<stdio.h> 
+float op1=2,op2=50; 
+%} 
+%% 
+"+" {printf("sum =%f",op1+op2);} 
+"-" {printf("difference =%f",op1-op2);} 
+"*" {printf("multiplication =%f",op1*op2);} 
+"/" {printf("division =%f",op1/op2);} 
+%% 
+int yywrap(){} 
+int main() 
+{ 
+printf("enter proper operator."); 
+yylex(); 
+} 
